@@ -1,4 +1,4 @@
-import Layout from '../../components/layout'
+
 import {useRouter} from "next/router";
 
 const Post=()=> {
@@ -6,9 +6,9 @@ const Post=()=> {
   const {query}=useRouter()
 
   return (
-    <Layout>
+<div>
         {query.id}
-    </Layout>
+</div>
   )
 }
 
