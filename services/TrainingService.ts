@@ -1,4 +1,4 @@
-import {IAddExercise, ITraining,IWeek} from "../interfaces/Training";
+import {IAddExercise, ITraining} from "../interfaces/Training";
 import prisma from "../prisma/prisma";
 export abstract class TrainingService {
 
