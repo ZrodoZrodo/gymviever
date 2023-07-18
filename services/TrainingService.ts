@@ -40,6 +40,7 @@ export abstract class TrainingService {
             }
 
 
+
             return await prisma.training.create({
                 data:{
                     name:training.name,
