@@ -10,8 +10,18 @@ const hello = async (req: NextApiRequest, res: NextApiResponse) => {
    //res.json(await UserService.addUser({email:"string",name:"string",password:"string",nick:"string"}))
 
   // res.json(await TrainingService.addExercise({id:"64b6d657ea09d0d4b5f1c2ff",name:"Przysiad",comment:"lubie lubie"}))
-
-
+  res.send("hello")
+  // res.json(await prisma.user.findFirst({
+  //   where:{id:"64b6d657ea09d0d4b5f1c2ff"},
+  //   select:{
+  //     exercise:{
+  //       select:{
+  //         name:true,
+  //         weeks:true
+  //       }
+  //     }
+  //   }
+  // }))
   // res.json(await TrainingService.addTraining(
   //     {
   //       name:"trening2",
@@ -42,24 +52,24 @@ const hello = async (req: NextApiRequest, res: NextApiResponse) => {
 
 
 
-   res.json(await prisma.user.findFirst({
-     where:{id:"64b6d657ea09d0d4b5f1c2ff"},
-     select:{
-        trainings: {
-
-          select:{
-            name:true,
-            exercises:{
-              select: {
-                name:true,
-                weeks:true,
-              }
-
-            }
-          }
-        }
-     }
-  }))
+  //  res.json(await prisma.user.findFirst({
+  //    where:{id:"64b6d657ea09d0d4b5f1c2ff"},
+  //    select:{
+  //       trainings: {
+  //
+  //         select:{
+  //           name:true,
+  //           exercises:{
+  //             select: {
+  //               name:true,
+  //               weeks:true,
+  //             }
+  //
+  //           }
+  //         }
+  //       }
+  //    }
+  // }))
   // res.json(await prisma.training.findFirst({
   //   where:{id:"64b6dbf2ea09d0d4b5f1c305"},
   //   select:{

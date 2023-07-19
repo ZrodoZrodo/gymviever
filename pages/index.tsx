@@ -20,5 +20,5 @@ export default index
 
 
 export const getServerSideProps = async () => {
-    return {props:UserService.getUser('tdest')}
+    return {props:UserService.getUser('string')}
 }

@@ -21,6 +21,22 @@ export abstract class TrainingService {
         }
     }
 
+
+    public static async addSavedTraining({name,exercises,userId,description}:{name:string,exercises:string[],userId:string,description:string}){
+        return await prisma.savedTrainings.create({
+            data:{
+                name,
+                description,
+                User:{
+                    connect:{id:userId}
+                },
+                exercises:{
+                    connect: exercises.map((ex) => ({id: ex})),
+                }
+            }
+        })
+    }
+
     public static async addTraining(training:ITraining ) {
         try {
             for (const ex of training.week) {

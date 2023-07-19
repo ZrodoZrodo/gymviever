@@ -1,9 +1,9 @@
 export interface ITraining{
-    name:string|undefined,
+    name:string,
     Userid:string,
     date:string,
     week:IWeek[],
-    comment:string|null
+    comment:string
 }
 
 export interface IWeek{
